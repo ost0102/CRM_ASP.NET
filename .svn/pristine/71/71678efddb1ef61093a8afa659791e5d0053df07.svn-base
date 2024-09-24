@@ -1,0 +1,208 @@
+<?xml version="1.0"?>
+<!--
+    Note: As an alternative to hand editing this file you can use the 
+    web admin tool to configure settings for your application. Use
+    the Website->Asp.Net Configuration option in Visual Studio.
+    A full list of settings and comments can be found in 
+    machine.config.comments usually located in 
+    \Windows\Microsoft.Net\Framework\v2.x\Config 
+-->
+<configuration>
+  <configSections>
+    <section name="DbResourceProvider" type="YJIT.Globalization.DbResourceProviderSection,YJIT.Globalization" requirePermission="false"/>
+    <section name="DbProvider" type="YJIT.Data.DbProviderSection,YJIT.Data" requirePermission="false"/>
+  </configSections>
+  <!--Using ConnectionStrings entry. You can also use a full SQL connection string.-->
+  <!--<DbResourceProvider connectionString="FMS_MSSQL" resourceTableName="Localizations" addMissingResources="true" databaseType="MSSQL" offlineMode="false" designTimeVirtualPath="/" showLocalizationControlOptions="true" showControlIcons="true" localizationFormWebPath="~/localizationadmin/LocalizationAdmin.aspx" useVsNetResourceNaming="false" stronglyTypedGlobalResource="~/_Classese/Resources.cs,AppResources" />
+  <DbProvider connectionString="FMS_MSSQL" databaseType="MSSQL" offlineMode="false" />-->
+  <DbResourceProvider connectionString="FMS_ORACLE" resourceTableName="Localizations" addMissingResources="true" databaseType="ORACLE" offlineMode="false" designTimeVirtualPath="/" showLocalizationControlOptions="true" showControlIcons="true" localizationFormWebPath="~/localizationadmin/LocalizationAdmin.aspx" useVsNetResourceNaming="false" stronglyTypedGlobalResource="~/_Classese/Resources.cs,AppResources"/>
+  <DbProvider connectionString="FMS_ORACLE" databaseType="ORACLE" offlineMode="false"/>
+  <connectionStrings>
+    <!--<add name="FMS_ORACLE" connectionString="Data Source=DEV.ELVIS.COM;User Id=ELVIS_SYS;Password=ELVIS_SYS;Integrated Security=no;Connection Lifetime=0;Min Pool Size=0;Max Pool Size=100;Pooling=true;Unicode=true"/>-->
+    <add name="FMS_ORACLE" connectionString="Data Source=CRM;User Id=CRM;Password=CRM1202;Integrated Security=no;Connection Lifetime=0;Min Pool Size=0;Max Pool Size=100;Pooling=true;Unicode=true"/>
+  </connectionStrings>
+  <appSettings>
+    <!-- Application Custom Settings -->
+    <add key="ActiveConn" value="FMS_MSSQL"/>
+    <add key="DBType" value="MSSQL"/>
+    <add key="UseEncPass" value="TRUE"/>
+    <add key="UseSAP" value="FALSE"/>
+    <add key="EnableClientSession" value="TRUE"/>
+    <add key="AuthType" value="1"/>
+    <add key="EDILocalPath" value="Z:\"/>
+  </appSettings>
+  <!--Mail settings-->
+  <system.net>
+    <mailSettings>
+      <smtp>
+        <network host="mail.yjit.co.kr" userName="system@yjit.co.kr" password="elvis2015" />
+        <!--<network host="mail.econco.co.kr" userName="sykim@econco.co.kr" password="123sykim**"/>-->
+      </smtp>
+    </mailSettings>
+  </system.net>
+  <!--Mail settings-->
+  <system.web>
+    <!-- FMS TEST
+        Set compilation debug="true" to insert debugging 
+        symbols into the compiled page. Because this 
+        affects performance, set this value to true only 
+        during development.
+        -->
+    <compilation debug="true" targetFramework="4.0">
+      <assemblies>
+        <add assembly="System.Data.OracleClient, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B77A5C561934E089"/>
+        <add assembly="System.Management, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+        <add assembly="System.Design, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+        <add assembly="Accessibility, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+        <add assembly="System.Deployment, Version=4.0.0.0, Culture=neutral, PublicKeyToken=B03F5F7F11D50A3A"/>
+      </assemblies>
+    </compilation>
+    <!-- Custom Error Pages -->
+    <customErrors mode="RemoteOnly" defaultRedirect="GenericErrorPage.htm">
+      <error statusCode="403" redirect="NoAccess.htm"/>
+      <error statusCode="404" redirect="FileNotFound.htm"/>
+    </customErrors>
+    <!-- Authentication and Authorization Settings -->
+    <authentication mode="Forms">
+      <forms loginUrl="/Login.aspx" name=".ASPXFORMSAUTH" timeout="120" defaultUrl="/Default_PSA.aspx"/>
+    </authentication>
+    <authorization>
+      <!--<allow users="?"/>-->
+      <deny users="?"/>
+    </authorization>
+    <!-- User for generate EDI files / edi 파일을 생성할 계정 항목/ 계정이 생성되면 설정할 것 -->
+    <!--<identity impersonate="true" userName="edi" password="wjedi"/>-->
+    <identity impersonate="true"/>
+    <!-- Pages Default Settings -->
+    <pages enableSessionState="true" enableViewStateMac="false" validateRequest="true" theme="Default" controlRenderingCompatibilityVersion="3.5" clientIDMode="AutoID">
+      <controls>
+        <add tagPrefix="ywc" assembly="YJIT.Web.UI.WebControls" namespace="YJIT.Web.UI.WebControls"/>
+      </controls>
+    </pages>
+    <httpModules>
+      <add name="Session" type="System.Web.SessionState.SessionStateModule"/>
+      <!--<add name="ScriptCompressorModule" type="YJIT.ScriptHandler.ScriptCompressorModule,YJIT.ScriptHandler"  />-->
+    </httpModules>
+    <sessionState mode="InProc" timeout="120"/>
+    <!--<httpRuntime executionTimeout="3" />-->
+    <!-- Globalization Settings -->
+    <globalization resourceProviderFactoryType="YJIT.Globalization.DbSimpleResourceProviderFactory,YJIT.Globalization" enableClientBasedCulture="false" requestEncoding="UTF-8" responseEncoding="UTF-8" uiCulture="en-US" culture="en-US"/>
+    <!--<machineKey
+       validationKey="705FFCC0F0E00672DFF00F3BCDDBEF1304B74A508101CDF244F07F537C5B3A5B7E63CA2AC902D23005A18FB0B7363EB93C1A81F309E7672B0925CC0CA03289D8"
+       decryptionKey="434910A4E70033C58330394E84EA17DC4B4B8514720C72A1AC5F37B1EAE5AFE112B20422F3C8B02DE8816F7020917A0F2594066234BEADDFB03250AAF20C0785"
+       validation="SHA1" decryption="Auto" />-->
+    <machineKey validationKey="FC320E7187853310ABA520A8AC10CFD0E2DEDD9662AB5812D9658951BCB39EACB2125BF1D40C209619976C674D7795B85E0A1F6E87B56D423DDDE9457D69C94A" decryptionKey="24D5658AC70F5F075ACA31DD7C4E072BAD06BE0A60D98726" validation="SHA1"/>
+    <httpHandlers>
+      <add verb="*" path="CombinedJs.axd" type="YJIT.ScriptHandler.ScriptCompressorHandler, YJIT.ScriptHandler"/>
+    </httpHandlers>
+    <httpRuntime maxRequestLength="10240"/>
+  </system.web>
+  <!-- Folder specific settings -->
+  <!-- Do not restrict access to common folders -->
+  <location path="App_Themes">
+    <system.web>
+      <authorization>
+        <allow users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="Common">
+    <system.web>
+      <authorization>
+        <allow users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="CRM/CrmArInfo.aspx">
+    <system.web>
+      <authorization>
+        <allow users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="CRM/CrmCsSetupInfo.aspx">
+    <system.web>
+      <authorization>
+        <allow users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <location path="login_yjadmin.aspx">
+    <system.web>
+      <authorization>
+        <allow users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <!-- WCF gateway-->
+  <location path="WCF">
+    <system.web>
+      <authorization>
+        <allow users="*"/>
+      </authorization>
+    </system.web>
+  </location>
+  <system.webServer>
+    <validation validateIntegratedModeConfiguration="false"/>
+    <defaultDocument>
+      <files>
+        <remove value="default.aspx"/>
+        <remove value="iisstart.htm"/>
+        <remove value="index.html"/>
+        <remove value="index.htm"/>
+        <remove value="Default.asp"/>
+        <remove value="Default.htm"/>
+        <add value="default_psa.aspx"/>
+      </files>
+    </defaultDocument>
+  </system.webServer>
+  <!--/////////////////////////Start WCF Configuration///////////////////////////-->
+  <system.serviceModel>
+    <serviceHostingEnvironment aspNetCompatibilityEnabled="true"/>
+    <behaviors>
+      <serviceBehaviors>
+        <behavior name="BizServiceBehavior">
+          <serviceMetadata httpGetEnabled="true"/>
+          <serviceDebug includeExceptionDetailInFaults="false"/>
+        </behavior>
+        <behavior name="RptServiceBehavior">
+          <serviceMetadata httpGetEnabled="true"/>
+          <serviceDebug includeExceptionDetailInFaults="false"/>
+        </behavior>
+      </serviceBehaviors>
+    </behaviors>
+    <bindings>
+      <wsHttpBinding>
+        <binding name="WSHttpBinding_IBizService" maxReceivedMessageSize="2147483647" maxBufferPoolSize="2147483647">
+          <security mode="None">
+            <transport clientCredentialType="None"/>
+            <message clientCredentialType="None"/>
+          </security>
+        </binding>
+      </wsHttpBinding>
+    </bindings>
+    <services>
+      <service behaviorConfiguration="BizServiceBehavior" name="YJIT.WCF.BizService">
+        <endpoint address="" binding="wsHttpBinding" bindingConfiguration="WSHttpBinding_IBizService" contract="YJIT.WCF.IBizService">
+          <identity>
+            <dns value="localhost"/>
+          </identity>
+        </endpoint>
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange"/>
+      </service>
+      <service behaviorConfiguration="RptServiceBehavior" name="RptService">
+        <endpoint address="" binding="wsHttpBinding" contract="IRptService">
+          <identity>
+            <dns value="localhost"/>
+          </identity>
+        </endpoint>
+        <endpoint address="mex" binding="mexHttpBinding" contract="IMetadataExchange"/>
+      </service>
+    </services>
+  </system.serviceModel>
+  <!--/////////////////////////End WCF Configuration///////////////////////////-->
+</configuration>

@@ -1,0 +1,30 @@
+#SysOfficeSetup@SearchAcctCode
+-- SysOfficeSetup@SearchAcctCode
+#SysOfficeSetup@SearchCustomer
+-- Wizard@SearchCustomerSELECT A.OFFICE_NM     , A.ENG_ADDR     , A.LOC_NM     , A.LOC_ADDR
+     , A.CTRY_CD
+     , B.CTRY_NM
+     , A.CURR_CD
+     , C.CD_NM AS CURR_NM
+     , A.AIR_PORT_CD
+     , D.LOC_NM AS AIR_PORT_NM
+     , A.SEA_PORT_CD
+     , E.LOC_NM AS SEA_PORT_NM
+     , F.AGENT_IATA_NO AS AGENT_IATA_CD
+     , A.SEA_BL_PREFIX
+     , A.AIR_BL_PREFIX
+     , A.OFFICE_PREFIX
+     , A.LOC_BANK_INFO
+     , A.LOC_BANK_ENG_INFO
+     , A.FCUR_BANK_INFO
+     , A.CUSTOMS_CD
+     , A.FOUND_YEAR
+     , A.TAX_OFFICE_CD
+     , A.VAT_PER
+     , ACCT_APLY_GRP  FROM MDM_OFFICE_MST A
+         LEFT OUTER JOIN MDM_CTRY_MST B ON B.CTRY_CD = A.CTRY_CD
+         LEFT OUTER JOIN MDM_COM_CODE C ON C.COMN_CD = A.CURR_CD AND C.GRP_CD = 'M03'
+         LEFT OUTER JOIN MDM_PORT_MST D ON D.LOC_CD = A.AIR_PORT_CD
+         LEFT OUTER JOIN MDM_PORT_MST E ON E.LOC_CD = A.SEA_PORT_CD
+         LEFT OUTER JOIN MDM_CUST_MST F ON F.CUST_CD = F.CUST_CD
+ WHERE OFFICE_CD = '@CUST_CD'

@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="VB" Debug="true" Service="YJIT.WCF.BizService" CodeBehind="~/App_Code/YJIT.WCF/BizService.vb" %>

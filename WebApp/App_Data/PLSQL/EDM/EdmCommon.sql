@@ -1,0 +1,4 @@
+#EdmCommon@SearchTimestamp
+--EdmCommon@SearchTimestamp
+SELECT TO_CHAR(SYSTIMESTAMP, 'YYYYMMDDHH24MISSff4') AS TIMEPART 
+  FROM DUAL

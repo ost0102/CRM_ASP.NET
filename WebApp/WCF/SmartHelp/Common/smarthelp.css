@@ -1,0 +1,124 @@
+﻿a{ font-family:"tahoma","tahoma"; color:#474747; font-size:11px; text-decoration:none;}
+
+#top{background: url(../common/bg-top.jpg) top repeat-x;position:relative;z-index:999;}
+
+.clearfix { display: block; }
+
+.wrap 
+{
+position: relative;
+z-index: 300;
+margin: 0 auto;
+}
+
+ul.nav ul{display:none;}
+ul.nav li:hover>ul{display:block}
+ul.nav ul{position: absolute;left:0;top:101%;background:#7C7C7C;border:1px solid #686868;border-top:none;width:200px;}
+ul.nav ul ul{position: absolute;left:98%;top:0;z-index:999}
+ul.nav,ul.nav ul {margin:0px;list-style:none;padding:0;}
+ul.nav table {border-collapse:collapse}
+ul.nav {display:block;zoom:1;float: left;}
+ul.nav li{display:block;font-size:0;}
+ul.nav a:active, ul.nav a:focus {outline-style:none;}
+ul.nav a {display:block;vertical-align:middle;text-align:left;text-decoration:none;padding:8px 15px;font:11px "Lucida Sans Unicode", Tahoma, Arial, sans-serif;color: #fff;text-decoration:none;text-transform:uppercase;text-shadow:1px 1px #000;-moz-text-shadow:1px 1px #000;-webkit-text-shadow:1px 1px #000;}
+ul.nav span{overflow:hidden;}
+ul.nav li {float:left;}
+ul.nav ul li {float:none;}
+ul.nav ul a {text-align:left;white-space:nowrap;}
+ul.nav li:hover{position:relative;}
+ul.nav li:hover>a{background: url(../common/nav-hover.jpg) repeat-x;}
+ul.nav li a:hover{background: url(../common/nav-hover.jpg) repeat-x;}
+ul.nav img {border: none;float:left;_float:none;margin-right:4px;width:16px;height:16px;}
+ul.nav ul img {width:16px;height:16px;}
+ul.nav img.over{display:none}
+ul.nav li.dis a:hover img.over{display:none !important}
+ul.nav li.dis a:hover img.def {display:inline !important}
+ul.nav li:hover > a img.def  {display:none}
+ul.nav li:hover > a img.over {display:inline}
+ul.nav a:hover img.over,ul.nav a:hover ul img.def,ul.nav a:hover a:hover img.over{display:inline}
+ul.nav a:hover img.def,ul.nav a:hover ul img.over,ul.nav a:hover a:hover img.def{display:none}
+ul.nav a:hover ul{display:block}
+
+/*=========Spliter style==============*/
+html, body{
+height:100%;width:100%; 
+margin:0;padding:0;overflow: hidden;
+font-size: 12px;
+font-family: Arial, Helvetica, sans-serif;
+line-height: 20px;
+
+}
+
+#splitterContainer {/* Main splitter element */
+width:100%;margin:0;padding:0;
+}
+
+#leftPane{
+float:left;width:15%;height:100%;
+background:white;
+overflow: auto;
+}
+#rightPane{	/*Contains toolbar and horizontal splitter*/
+float:right;width:85%;height:100%;
+background:white;
+}
+#rightSplitterContainer{/*horizontal splitter*/	
+width:100%;height:100%;
+background:white;border-top:solid 1px #3a6ea5;
+} 
+
+#rightTopPane{/*Top nested in horizontal splitter */
+width:100%;height:90%;overflow:auto;background:white;
+}
+#rightBottomPane{/*Bottom nested in horizontal splitter */
+background:white;width:100%;overflow:auto;
+}
+
+
+/* Splitbar styles; these are the default class names and required styles */
+.splitbarV {
+float:left;width:6px;height:100%;
+line-height:0px;font-size:0px;
+border-left:solid 1px #3a6ea5;border-right:solid 1px #3a6ea5;
+background:#cbe1fb url(../Common/splitter_v1/img/panev.gif) 0% 50%;
+}
+.splitbarH {
+height:6px;text-align:left;line-height:0px;font-size:0px;
+border-top:solid 1px #3a6ea5;border-bottom:solid 1px #3a6ea5;
+background:#cbe1fb url(../Common/splitter_v1/img/paneh.gif) 50% 0%;
+}
+
+.splitbuttonV{
+margin-top:-41px;margin-left:-4px;top:50%;position:relative;
+height:83px;width:10px;
+background:transparent url(../Common/splitter_v1/img/panevc.gif) 10px 50%;
+}
+.splitbuttonV.invert{
+margin-left:0px;background:transparent url(../Common/splitter_v1/img/panevc.gif) 0px 50%;
+}
+.splitbuttonH{
+margin-left:-41px;left:50%;position:relative;
+height:10px !important;width:83px;
+background:transparent url(../Common/splitter_v1/img/panehc.gif) 50% 0px;
+}
+.splitbuttonH.invert{
+margin-top:-4px;background:transparent url(../Common/splitter_v1/img/panehc.gif) 50% -10px;
+}
+.splitbarV.working,.splitbarH.working,.splitbuttonV.working,.splitbuttonH.working{
+    -moz-opacity:.50; filter:alpha(opacity=50); opacity:.50;
+}
+        
+/*=========Tree style==============*/
+.overview {
+		background: #FFEC9D;
+		padding: 10px;
+		width: 90%;
+		border: 1px solid #CCCCCC;
+}
+
+
+/*========Node path==============*/
+.node_path
+{
+    color:Maroon;
+}

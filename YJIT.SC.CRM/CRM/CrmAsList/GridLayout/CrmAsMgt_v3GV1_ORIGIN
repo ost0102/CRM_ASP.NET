@@ -1,0 +1,181 @@
+﻿<XtraSerializer version="1.0" application="View">
+  <property name="#LayoutVersion" />
+  <property name="ActiveFilterEnabled">true</property>
+  <property name="Columns" iskey="true" value="37">
+    <property name="Item1" isnull="true" iskey="true">
+      <property name="Width">85</property>
+      <property name="Visible">true</property>
+      <property name="VisibleIndex">6</property>
+      <property name="Name">GV1_MNGT_NO</property>
+    </property>
+    <property name="Item2" isnull="true" iskey="true">
+      <property name="Width">73</property>
+      <property name="Visible">true</property>
+      <property name="VisibleIndex">7</property>
+      <property name="Name">GV1_REQ_YMD</property>
+    </property>
+    <property name="Item3" isnull="true" iskey="true">
+      <property name="Width">42</property>
+      <property name="Name">GV1_REQ_HM</property>
+    </property>
+    <property name="Item4" isnull="true" iskey="true">
+      <property name="Width">57</property>
+      <property name="Visible">true</property>
+      <property name="VisibleIndex">4</property>
+      <property name="Name">GV1_REQ_SVC</property>
+    </property>
+    <property name="Item5" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="VisibleIndex">5</property>
+      <property name="Name">GV1_REQ_SVC2</property>
+    </property>
+    <property name="Item6" isnull="true" iskey="true">
+      <property name="Width">57</property>
+      <property name="Visible">true</property>
+      <property name="VisibleIndex">1</property>
+      <property name="Name">GV1_CUST_CD</property>
+    </property>
+    <property name="Item7" isnull="true" iskey="true">
+      <property name="Width">98</property>
+      <property name="Visible">true</property>
+      <property name="VisibleIndex">2</property>
+      <property name="Name">GV1_CUST_NM</property>
+    </property>
+    <property name="Item8" isnull="true" iskey="true">
+      <property name="Width">238</property>
+      <property name="Visible">true</property>
+      <property name="VisibleIndex">8</property>
+      <property name="Name">GV1_CONTENT</property>
+    </property>
+    <property name="Item9" isnull="true" iskey="true">
+      <property name="Width">52</property>
+      <property name="Name">GV1_REQ_USR</property>
+    </property>
+    <property name="Item10" isnull="true" iskey="true">
+      <property name="Width">76</property>
+      <property name="Name">GV1_TEL_NO</property>
+    </property>
+    <property name="Item11" isnull="true" iskey="true">
+      <property name="Width">77</property>
+      <property name="Name">GV1_REQ_TYPE</property>
+    </property>
+    <property name="Item12" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="VisibleIndex">10</property>
+      <property name="Name">GV1_REQ_TYPE2</property>
+    </property>
+    <property name="Item13" isnull="true" iskey="true">
+      <property name="Width">56</property>
+      <property name="Name">GV1_PROC_TYPE</property>
+    </property>
+    <property name="Item14" isnull="true" iskey="true">
+      <property name="Width">104</property>
+      <property name="Visible">true</property>
+      <property name="VisibleIndex">3</property>
+      <property name="Name">GV1_WORK_USR</property>
+    </property>
+    <property name="Item15" isnull="true" iskey="true">
+      <property name="Width">59</property>
+      <property name="Name">GV1_PRIORITY</property>
+    </property>
+    <property name="Item16" isnull="true" iskey="true">
+      <property name="Width">73</property>
+      <property name="Name">GV1_PRAR_YMD</property>
+    </property>
+    <property name="Item17" isnull="true" iskey="true">
+      <property name="Width">71</property>
+      <property name="Name">GV1_CMPT_YMD</property>
+    </property>
+    <property name="Item18" isnull="true" iskey="true">
+      <property name="Width">61</property>
+      <property name="Name">GV1_INS_USR</property>
+    </property>
+    <property name="Item19" isnull="true" iskey="true">
+      <property name="Width">142</property>
+      <property name="Name">GV1_RMK</property>
+    </property>
+    <property name="Item20" isnull="true" iskey="true">
+      <property name="Width">78</property>
+      <property name="Name">GV1_CMPT_RMK</property>
+    </property>
+    <property name="Item21" isnull="true" iskey="true">
+      <property name="Width">48</property>
+      <property name="Name">GV1_USE_YN</property>
+    </property>
+    <property name="Item22" isnull="true" iskey="true">
+      <property name="Width">46</property>
+      <property name="Name">GV1_SVC_CD</property>
+    </property>
+    <property name="Item23" isnull="true" iskey="true">
+      <property name="Width">47</property>
+      <property name="Name">GV1_MATN_YN</property>
+    </property>
+    <property name="Item24" isnull="true" iskey="true">
+      <property name="Width">54</property>
+      <property name="Name">GV1_SALES_NM</property>
+    </property>
+    <property name="Item25" isnull="true" iskey="true">
+      <property name="Width">63</property>
+      <property name="Name">GV1_FREE_YN</property>
+    </property>
+    <property name="Item26" isnull="true" iskey="true">
+      <property name="Width">63</property>
+      <property name="Name">GV1_FILE_YN</property>
+    </property>
+    <property name="Item27" isnull="true" iskey="true">
+      <property name="Name">GV1_SYS_ID</property>
+    </property>
+    <property name="Item28" isnull="true" iskey="true">
+      <property name="Width">47</property>
+      <property name="Visible">true</property>
+      <property name="VisibleIndex">0</property>
+      <property name="Name">GV1_SYS_NM</property>
+    </property>
+    <property name="Item29" isnull="true" iskey="true">
+      <property name="Name">GV1_DEV_CMPT_YMD</property>
+    </property>
+    <property name="Item30" isnull="true" iskey="true">
+      <property name="Name">GV1_DEV_CMPT_YN</property>
+    </property>
+    <property name="Item31" isnull="true" iskey="true">
+      <property name="Name">GV1_RETURN_YN</property>
+    </property>
+    <property name="Item32" isnull="true" iskey="true">
+      <property name="Name">GV1_JOB_SHARE</property>
+    </property>
+    <property name="Item33" isnull="true" iskey="true">
+      <property name="Width">230</property>
+      <property name="Visible">true</property>
+      <property name="VisibleIndex">9</property>
+      <property name="Name">GV1_WORK_CONTENT</property>
+    </property>
+    <property name="Item34" isnull="true" iskey="true">
+      <property name="Width">90</property>
+      <property name="Visible">true</property>
+      <property name="VisibleIndex">11</property>
+      <property name="Name">GV1_SHARE_DEPT</property>
+    </property>
+    <property name="Item35" isnull="true" iskey="true">
+      <property name="Width">73</property>
+      <property name="Visible">true</property>
+      <property name="VisibleIndex">12</property>
+      <property name="Name">GV1_INS_YMD</property>
+    </property>
+    <property name="Item36" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="VisibleIndex">13</property>
+      <property name="Name">GV1_WORK_USR2</property>
+    </property>
+    <property name="Item37" isnull="true" iskey="true">
+      <property name="Visible">true</property>
+      <property name="VisibleIndex">14</property>
+      <property name="Name">GV1_CMPT_YMD2</property>
+    </property>
+  </property>
+  <property name="OptionsView" isnull="true" iskey="true">
+    <property name="EnableAppearanceEvenRow">true</property>
+    <property name="ColumnAutoWidth">false</property>
+  </property>
+  <property name="ActiveFilterString" />
+  <property name="GroupSummarySortInfoState" />
+</XtraSerializer>

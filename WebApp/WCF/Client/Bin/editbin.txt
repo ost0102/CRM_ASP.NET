@@ -1,0 +1,1 @@
+"C:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\amd64\editbin.exe" "D:\YJIT.SC\CRM\ELVIS_CRM\WebApp\WCF\Client\Bin\YJIT.SC.App.exe" /SUBSYSTEM:WINDOWS,5.01

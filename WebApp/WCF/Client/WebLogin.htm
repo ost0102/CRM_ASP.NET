@@ -1,0 +1,43 @@
+﻿<HTML>
+  <HEAD>
+    <TITLE>Logis@FMS Demo</TITLE>
+    <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=utf-8" />
+</SCRIPT>
+
+</HEAD>
+<BODY>
+ 
+<script type="text/javascript">
+    function submitSCWebLogin(){
+		var domain = document.getElementById("domain").value;
+        var userid = document.getElementById("userid").value;
+		var pswd =  document.getElementById("pswd").value;
+        window.location = "./yjfms_demo.application?domain=" + domain + "&userid=" + userid + "&pswd=" + pswd;
+		
+    }
+</script>
+<table cellspacing=0 cellpadding=5 border=1>
+	<tr>
+		<th colspan="2">
+			SmartClient WebLogin
+		</th>
+	</tr>
+	<tr>
+		<td>Domain</td>
+		<td><input type="text" id="domain" width="100px"></td>
+	</tr>
+	<tr>
+		<td>User ID</td>
+		<td><input type="text" id="userid" width="100px"></td>
+	</tr>
+	<tr>
+		<td>Password</td>
+		<td><input type="password" id="pswd" width="100px"></td>
+	</tr>
+	<tr>
+		<td colspan=2 align="center"><a href="#" onclick="submitSCWebLogin();"> Login </a></td>
+	</tr>
+</table>
+
+</BODY>
+</HTML>
